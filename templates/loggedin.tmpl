@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Who I Follow</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  </head>
+  <body>
+	  <div class="hero has-text-centered is-primary">
+		  <div class="hero-body">
+			<h1 class="title is-1">
+				{{ .title }}
+			</h1>
+			<button id="logout-btn" class="button">Logout</button>
+		  </div>
+	  </div>
+	<div class="table-container has-text-centered">
+    <table class="table is-striped is-fullwidth">
+	<tr>
+	<th>Channel</th>
+	<th>Followed At</th>
+	</tr>
+	{{range .table}}
+		<tr>
+			<td>{{.channel}}</td>
+			<td>{{.followed_at}}</td>
+		</tr>
+	{{end}}
+	</table>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script  src="../assets/get.js"></script>
+</body>
+</html>
+
